@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div className="App flex flex-col bg-gray-200 h-screen">
-    <h1 className="text-8xl font-bold text-center">Calculator</h1>
+    <h1 className="text-8xl font-bold text-center">Counter</h1>
     <Display />
     </div>
   );
