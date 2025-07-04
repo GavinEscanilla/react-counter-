@@ -1,22 +1,14 @@
 import { useState } from "react";
- import Input from "./components/input.jsx";
- import Operators from "./components/Operators.jsx";
- import Calculation from "./components/Calculation.jsx";
+import Increment from "./components/Increment";
+
  const Display = () => {
-   const [Num1, setNum1] = useState(0);
-   const [Num2, setNum2] = useState(0);
-   const [Operator, setOperator] = useState("+");
-   const [Result, setResult] = useState(0);
-   return (
-     <div className="App  border-blue-600  w-screen h-full  border-2 flex flex-col justify-center">
-       <div className="flex flex-row border-2 border-red-950 justify-center">
-         <Input Setvalue={setNum1} />
-         <Operators SetOperator={setOperator} />
-         <Input Setvalue={setNum2} />
-       </div>
-  <Calculation num1={Num1} Op={Operator} num2={Num2} result={Result} setResult={setResult} /> 
+  const [count, setCount] = useState(0);
+   return(
+     <div className="flex flex-col items-center justify-center h-screen bg-gray-200">
+     <Increment setcount={setCount()} />
+      <div>{count}</div>
      </div>
-   );
+   )
  };
  
  export default Display;
